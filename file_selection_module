@@ -1,0 +1,11 @@
+# This is the module that deals with the action of selecting files. 
+
+import tkinter.filedialog
+import tkinter as tk
+
+def get_filename_with_path() -> str:
+  root = tk.Tk()
+  root.withdraw()
+  file_w_path = tk.filedialog.askopenfilename()
+  root.destroy()
+  return file_w_path
