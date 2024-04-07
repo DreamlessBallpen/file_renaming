@@ -1,4 +1,4 @@
-# This is the module that deals with the action of selecting files. 
+# This is the module that deals with the action of selecting files for the purpose of using their filenames / filepaths
 
 import tkinter.filedialog
 import tkinter as tk
@@ -9,3 +9,10 @@ def get_filename_with_path() -> str:
   file_w_path = tk.filedialog.askopenfilename()
   root.destroy()
   return file_w_path
+
+def get_filename_no_path() -> str:
+    abs_fname = get_filename()
+    # We get the first instance of '/' from the right, in the filename
+    index = abs_fname.rfind('/')
+    fname = abs_fname[index+1:]
+    return fname
