@@ -1,0 +1,9 @@
+This aims to rename a target file based on a format from the filename of a source file.
+For this specific project, the specific files follow a certain convention:
+
+Example:
+
+FileNameForClient_IntervalOfReport_CharactersToBeChanged_DateOfReport
+
+Where, a file having the latest Interval and Date needs to have its CharactersToBeChanged be following a previous file, without changing the date information in the filename.
+As such, this project is being created to suit that need.
